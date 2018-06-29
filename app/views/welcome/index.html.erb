@@ -1,3 +1,10 @@
+<h1>Posts</h1>
 <%= javascript_pack_tag 'application' %>
-<%= react_component 'Post', { title: 'A working react component', body: 'Simple but effective' }, prerender: true %>
+<%- 3.times do |k| %>
+  <%= react_component 'Post', { title: "A working react component, ##{k+1}", body: 'Simple but effective' }, prerender: true %>
+<% end %>
+
+<hr />
+<h1>Todo's</h1>
+
 <%= react_component 'Todo', { task: 'A working coffee component' } %>
